@@ -4,8 +4,10 @@ import weatherForecast from '../images/assets/weatherForecastIMG.png'
 import movieDb from '../images/assets/movieDb.png'
 import prankCalculator from '../images/assets/prankCalulator.png'
 import notTodoList from '../images/assets/notToDOList.png'
+import unitConverter from '../images/assets/unitConverter.png'
+import portfolioV1 from '../images/assets/portfolioV1.png'
 
-
+// C:\Users\rabin\Desktop\old\Fullstack_Developer_Practice\React\Dented Code React\portfolio_version_2\src\data\constant.js
 export const Bio = {
     name: "Rabin Shah",
     roles: [
@@ -311,10 +313,11 @@ export const Bio = {
       description:
         "This is weather forecast web apps. You can search weather of any city jusy by searching city name",
       image:
-      "../images/assets/weatherForecastIMG.png",
+      {weatherForecast},
+
         //"https://user-images.githubusercontent.com/64485885/255202416-e1f89b04-2788-45b0-abc2-9dec616669e2.png",
       tags: [
-        "HTML", "CSS", "Javascript",
+        "HTML", "CSS", "Javascript", "Bootstrap",
         "React Js",
         
       ],
@@ -330,7 +333,7 @@ export const Bio = {
       image:
       {movieDb},
         //"https://user-images.githubusercontent.com/64485885/234602896-a1bd8bcc-b72b-4821-83d6-8ad885bf435e.png",
-      tags: ["HTML", "CSS", "Javascript","React Js", "MongoDb", "Node Js", "Express Js", ],
+      tags: ["HTML", "CSS", "Javascript", "Bootstrap","React Js", "MongoDb", "Node Js", "Express Js", ],
       category: "web app",
       github: "https://github.com/rabin9087/Movie_Finder_API",
       webapp: "https://movie-finder-api.vercel.app/",
@@ -355,7 +358,7 @@ export const Bio = {
       {prankCalculator},
        // "https://user-images.githubusercontent.com/64485885/234916413-96296f13-fe4b-4cc4-b215-e72bd7c27928.png",
       tags: [
-        "HTML", "CSS", "Javascript", "React Js"
+        "HTML", "CSS", "Javascript", "Bootstrap","React Js"
       ],
       category: "web app",
       github: "https://github.com/rabin9087/prankCalculator",
@@ -369,7 +372,7 @@ export const Bio = {
       image:
       {notTodoList},
         //"https://github.com/rishavchanda/Brain-Tumor-Detection/raw/main/Readme_resource/Image2.png",
-      tags: ["React Js",
+      tags: ["React Js", "Bootstrap",
       "MongoDb",
       "Node Js",
       "Express Js",],
@@ -391,32 +394,33 @@ export const Bio = {
       //   },
       // ],
     },
-    // {
-    //   id: 4,
-    //   title: "Buckoid",
-    //   date: "Dec 2021 - Apr 2022",
-    //   description:
-    //     "App Is Currently In Playstore 100+ Downloads. This Project proposes an “Expense Tracking App”. Keep track of your personal expenses and compare them to your monthly income with the budget planner. It has Google Drive Cloud API for Backup of User Room Database. Made with Kotlin in MVVM Architecture & Live Data.",
-    //   image:
-    //     "https://camo.githubusercontent.com/fbf405040ae86b5d4a40f24e4ac034982cb8c0e2d850560ba64527997b258be8/68747470733a2f2f666972656261736573746f726167652e676f6f676c65617069732e636f6d2f76302f622f6c6f67696e2d65613565322e61707073706f742e636f6d2f6f2f4255434b4f49442532302831292e706e673f616c743d6d6564696126746f6b656e3d32653735376235372d323964372d346263612d613562322d653164346538313432373435",
-    //   tags: ["Kotlin", "MVVM", "Room Database", "Google Drive Cloud API"],
-    //   category: "android app",
-    //   github: "https://github.com/rishavchanda/Buckoid-Android-App",
-    //   webapp: "https://play.google.com/store/apps/details?id=com.rishav.buckoid",
-    // },
-    // {
-    //   id: 5,
-    //   title: "Job Finding App",
-    //   date: "Jun 2023 - Jul 2023",
-    //   description:
-    //     "A Job Finding App made with React Native, Axios. Users can search for any job coming from API and apply there.",
-    //   image:
-    //     "https://user-images.githubusercontent.com/64485885/255237090-cf798a2c-1b41-4bb7-b904-b5353a1f08e8.png",
-    //   tags: ["React Native", "JavaScript", "Axios"],
-    //   category: "android app",
-    //   github: "https://github.com/rishavchanda/Job-finder-App",
-    //   webapp: "https://github.com/rishavchanda/Job-finder-App",
-    // },
+    {
+      id: 4,
+      title: "Unit Converter",
+      date: "Aug 2023",
+      description: "This is unit converter web app. You can convert unit of Length, Area, Volume, Weight, Temperature and Time into another unit",
+      image: 
+      {unitConverter},
+       // "https://camo.githubusercontent.com/fbf405040ae86b5d4a40f24e4ac034982cb8c0e2d850560ba64527997b258be8/68747470733a2f2f666972656261736573746f726167652e676f6f676c65617069732e636f6d2f76302f622f6c6f67696e2d65613565322e61707073706f742e636f6d2f6f2f4255434b4f49442532302831292e706e673f616c743d6d6564696126746f6b656e3d32653735376235372d323964372d346263612d613562322d653164346538313432373435",
+      tags: ["HTML", "CSS", "Javascript","Bootstrap", "React Js"],
+      category: "web app",
+      github: "https://github.com/rabin9087/unitconverter",
+      webapp: "https://vercel.com/rabins-projects/unitconverter",
+    },
+    {
+      id: 5,
+      title: "Portfolio Version 1",
+      date: "Oct 2023",
+      description:
+        "This is my Portfolio version one. This was my first portfolio.",
+      image:
+      {portfolioV1},
+        //"https://user-images.githubusercontent.com/64485885/255237090-cf798a2c-1b41-4bb7-b904-b5353a1f08e8.png",
+      tags: ["React Native", "JavaScript", "Axios"],
+      category: "web app",
+      github: "https://github.com/rabin9087/reactPortfolio",
+      webapp: "https://react-portfolio-virid-beta.vercel.app/",
+    },
     // {
     //   id: 6,
     //   title: "Whatsapp Clone",
