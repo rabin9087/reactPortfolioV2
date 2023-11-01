@@ -313,7 +313,7 @@ export const Bio = {
       description:
         "This is weather forecast web apps. You can search weather of any city jusy by searching city name",
       image:
-      {weatherForecast},
+      weatherForecast,
 
         //"https://user-images.githubusercontent.com/64485885/255202416-e1f89b04-2788-45b0-abc2-9dec616669e2.png",
       tags: [
@@ -331,7 +331,7 @@ export const Bio = {
       date: "Sept 2023",
       description: "This is movie collection Database. You can find any movie here and you can listed them as a happy or action movie for you.",
       image:
-      {movieDb},
+      movieDb,
         //"https://user-images.githubusercontent.com/64485885/234602896-a1bd8bcc-b72b-4821-83d6-8ad885bf435e.png",
       tags: ["HTML", "CSS", "Javascript", "Bootstrap","React Js", "MongoDb", "Node Js", "Express Js", ],
       category: "web app",
@@ -355,7 +355,7 @@ export const Bio = {
       date: "Sept 2023",
       description: "This is a prank calulator. It work as a Calulator",
       image:
-      {prankCalculator},
+      prankCalculator,
        // "https://user-images.githubusercontent.com/64485885/234916413-96296f13-fe4b-4cc4-b215-e72bd7c27928.png",
       tags: [
         "HTML", "CSS", "Javascript", "Bootstrap","React Js"
@@ -370,7 +370,7 @@ export const Bio = {
       date: "Oct 2023",
       description: "This is not todo list web app. You can add a task you have done including the hours taken to do it. Later on you can add categories that task either as a todo task or not todo task.",
       image:
-      {notTodoList},
+      notTodoList,
         //"https://github.com/rishavchanda/Brain-Tumor-Detection/raw/main/Readme_resource/Image2.png",
       tags: ["React Js", "Bootstrap",
       "MongoDb",
@@ -400,7 +400,7 @@ export const Bio = {
       date: "Aug 2023",
       description: "This is unit converter web app. You can convert unit of Length, Area, Volume, Weight, Temperature and Time into another unit",
       image: 
-      {unitConverter},
+      unitConverter,
        // "https://camo.githubusercontent.com/fbf405040ae86b5d4a40f24e4ac034982cb8c0e2d850560ba64527997b258be8/68747470733a2f2f666972656261736573746f726167652e676f6f676c65617069732e636f6d2f76302f622f6c6f67696e2d65613565322e61707073706f742e636f6d2f6f2f4255434b4f49442532302831292e706e673f616c743d6d6564696126746f6b656e3d32653735376235372d323964372d346263612d613562322d653164346538313432373435",
       tags: ["HTML", "CSS", "Javascript","Bootstrap", "React Js"],
       category: "web app",
@@ -414,7 +414,7 @@ export const Bio = {
       description:
         "This is my Portfolio version one. This was my first portfolio.",
       image:
-      {portfolioV1},
+      portfolioV1,
         //"https://user-images.githubusercontent.com/64485885/255237090-cf798a2c-1b41-4bb7-b904-b5353a1f08e8.png",
       tags: ["React Native", "JavaScript", "Axios"],
       category: "web app",

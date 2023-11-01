@@ -63,10 +63,13 @@ align-items: center;
  display: flex;
  justify-content: center;
  align-items: center;
-gap: 32px;
-list-style: none;
-@media and screen (max-width: 768px){
+  gap: 32px;
+  list-style: none;
+
+  @media screen and (max-width: 768px) {
   display: none;
+  margin-Top: 20px;
+  height: 100%
 }
  `;
 
@@ -112,7 +115,7 @@ height: 70%;
   color: ${({theme}) => theme.white};
 }
 
-@media screen and (max-width: 640px){
+@media only screen and (max-width: 640px){
   font-size: 0.8rem;
  }
  `;
@@ -131,9 +134,10 @@ height: 70%;
  postion: absolute;
  top: 80;
  right: 0;
+ height: 100%
  width: 100%;
  padding: 12px 40px 24px 40px;
- background: ${({ theme }) => theme.card_light + 99};
+ background: ${({ theme }) => theme.primary + 99};
  transition: all 0.3s ease-in-out;
  transform: ${({open}) => open ? 'translateX(0)' : 'translateX(100%)'};
  border-radius: 0 0 20 20px;
@@ -225,17 +229,8 @@ const Navbar = () => {
             Contact
           </MobileMenuLinks>
 
-          <GithubButton
-          style={{
-            padding: "10px 16px",
-            background: `${theme.primary}`,
-            color: "white",
-            width: "max-content"
-          }}
-          href= {Bio.github}
-          target="blank"
-          >
-            Github Profile
+          <GithubButton>
+          <a className='githubProfile' style={{textDecoration: 'none'}} href={Bio.github} target='blank'>Github </a>
           </GithubButton>
         </MobileMenu>)
       }
