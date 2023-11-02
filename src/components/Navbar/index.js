@@ -199,7 +199,7 @@ const Navbar = () => {
 
       {
         open && 
-        (<MobileMenu open = {open} style={{background: '#854CE6', height:'100%'}}>
+        (<MobileMenu open = {open}>
 
           <MobileMenuLinks style={{textAlign: 'right', padding: '5px 20px 0 0'}}>
 
