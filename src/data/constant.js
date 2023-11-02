@@ -21,7 +21,7 @@ export const Bio = {
 
     github: "https://github.com/rabin9087",
     resume:
-      {resume},
+      resume,
     linkedin: "https://www.linkedin.com/in/rabin-shah-175a20117/",
     insta: "https://www.instagram.com/rabinshah9087",
     facebook: "https://www.facebook.com/rabin908765",

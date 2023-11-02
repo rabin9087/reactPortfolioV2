@@ -1,10 +1,13 @@
 import React, { useState } from 'react'
 import {Link as LinkR} from "react-router-dom"
-import styled, { useTheme } from 'styled-components';
+import styled from 'styled-components';
 import {DiCssdeck} from 'react-icons/di';
-import {FaBars} from 'react-icons/fa'
+import {FaBars,} from 'react-icons/fa'
+
 import { Bio } from '../../data/constant';
+import {motion} from 'framer-motion'
 import '../../App.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Nav = styled.div`
 background-color: ${({ theme }) => theme.card_light};
@@ -49,7 +52,7 @@ align-items: center;
  @media screen and (max-width: 768px){
   display: block;
   position: absolute;
-  top:0;
+  top: 0;
   right:0;
   transform: translate(-100%, 50%);
   font-size: 1.8rem;
@@ -129,30 +132,29 @@ height: 70%;
  const MobileMenu = styled.div`
  display: flex;
  flex-direction: column;
- justify-content: center;
  gap: 16px;
  postion: absolute;
- top: 80;
+ top: 0;
  right: 0;
- height: 100%
+ height: 100%;
  width: 100%;
  padding: 12px 40px 24px 40px;
- background: ${({ theme }) => theme.primary + 99};
- transition: all 0.3s ease-in-out;
+ //background: ${({ theme }) => theme.primary};
+ transition: all 1s ease-in-out;
  transform: ${({open}) => open ? 'translateX(0)' : 'translateX(100%)'};
- border-radius: 0 0 20 20px;
+ border-radius: 0 0 20px 20px;
  box-shodow: 0 5px 10px rgb(0, 0, 0, 0.3);
  opacity: ${({open}) => open ? '1' : '0'};
  z-index: ${({open}) => open ? '1' : '-1'};
  `;
 
-const MobileMenuLinks = styled(LinkR)`
+const MobileMenuLinks = styled.a`
 color: ${({ theme }) => theme.text_primary};
 font-weight: 500;
 cursor: pointer;
 text-decoration: none;
 transition: all 0.2s ease-in-out;
-&:hover {
+hover {
   color: ${({ theme }) => theme.primary};
 }
 `;
@@ -160,7 +162,7 @@ transition: all 0.2s ease-in-out;
 const Navbar = () => {
 
   const [open, setOpen] = useState(false);
-  const theme = useTheme();
+  
   return (
     <Nav>
       <NavContainer>
@@ -176,10 +178,11 @@ const Navbar = () => {
           </a>
         </NavLogo>
         <MobileIcon>
-        
-          <FaBars onClick = {() => {
+       
+          {!open && <FaBars onClick = {() => {
             setOpen(!open)
-          }}/>
+          }}/>}
+          
         </MobileIcon>
         <NavItems>
           <NavLink href='/'>Home</NavLink>
@@ -196,7 +199,16 @@ const Navbar = () => {
 
       {
         open && 
-        (<MobileMenu open = {open}>
+        (<MobileMenu open = {open} style={{background: '#854CE6', height:'100%'}}>
+
+          <MobileMenuLinks style={{textAlign: 'right', padding: '5px 20px 0 0'}}>
+
+          <i style={{color: "#ffffff", fontSize: '25px', fontWeight: 'bold'}} onClick = {() => {
+            setOpen(!open)
+          }}>X</i>
+         
+          </MobileMenuLinks>  
+
           <MobileMenuLinks href="#about" onClick={()=> setOpen(!open)}>
             Home
           </MobileMenuLinks>
@@ -229,9 +241,9 @@ const Navbar = () => {
             Contact
           </MobileMenuLinks>
 
-          <GithubButton>
-          <a className='githubProfile' style={{textDecoration: 'none'}} href={Bio.github} target='blank'>Github </a>
-          </GithubButton>
+          {/* <GithubButton>
+          <a className='githubProfile' style={{textDecoration: 'none'}} href={Bio.github} target='blank' onClick={()=> setOpen(!open)}>Github </a>
+          </GithubButton> */}
         </MobileMenu>)
       }
     </Nav>

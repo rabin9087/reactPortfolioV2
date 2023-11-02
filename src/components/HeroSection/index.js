@@ -1,10 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components';
 import { Bio } from '../../data/constant';
 import Typewriter from 'typewriter-effect';
+import {Link as LinkR} from "react-router-dom"
 import image from '../../images/rabinProfile.png';
 import HeroBgAnimation from '../HeroBgAnimation'
 import { GithubButton } from '../Navbar';
+import { motion } from "framer-motion"
 
 const HeroContainer = styled.div `
 background-color: ${({theme}) => theme.card_light};
@@ -189,12 +191,12 @@ background: -moz-linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 1
 background: -webkit-linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
 box-shadow:  20px 20px 60px #1F2634,
 -20px -20px 60px #1F2634;
-:hover {
-  transform: scale(1.05);
-  transition: all 0.4s ease-in-out;
-  padding: 10px;
-  box-shadow: 20px 20px 60px #1F2634,
-  filter: brightness(1);
+ :hover {
+//   transform: scale(1.5);
+//   transition: all 0.4s ease-in-out;
+//   padding: 10px;
+//   box-shadow: 20px 20px 60px #1F2634,
+//   filter: brightness(1);
   background: ${({ theme }) => theme.primary};
   }
 
@@ -228,6 +230,7 @@ const Image = styled.img `
 
 
 const Hero = () => {
+
   return (
     <div id='about'>
       <HeroContainer>
@@ -250,8 +253,8 @@ const Hero = () => {
                 </Span>
               </TextLoop>
               <SubTitle>{Bio.description}</SubTitle>
-              <ResumeButton href={Bio.resume} target="blank">
-                  Check Resume
+              <ResumeButton>Check Resume 
+                  {console.log("I am clicked")}
               </ResumeButton>
               
             </HeroLeftContainer>
@@ -264,4 +267,4 @@ const Hero = () => {
   )
 }
 
-export default Hero
+export default Hero;
