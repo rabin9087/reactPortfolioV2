@@ -37,7 +37,7 @@ const HeroBg = styled.div `
   left: 50%;
   overflow: hidden;
   width: 100%;
-  height: 100%;
+  height: 55%;
   padding: 0 30px;
   -webkit-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
@@ -55,7 +55,6 @@ const HeroInnerContainer = styled.div `
   width: 100%;
   max-width: 1100px;
 
-  
   @media screen and (max-width: 960px){
     flex-direction: column;
   }
@@ -253,7 +252,8 @@ const Hero = () => {
                 </Span>
               </TextLoop>
               <SubTitle>{Bio.description}</SubTitle>
-              <ResumeButton>Check Resume 
+
+              <ResumeButton href={Bio.resume} download='Rabin Shah Resume'>Check Resume 
                   {console.log("I am clicked")}
               </ResumeButton>
               

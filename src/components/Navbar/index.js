@@ -3,11 +3,9 @@ import {Link as LinkR} from "react-router-dom"
 import styled from 'styled-components';
 import {DiCssdeck} from 'react-icons/di';
 import {FaBars,} from 'react-icons/fa'
-
 import { Bio } from '../../data/constant';
-import {motion} from 'framer-motion'
 import '../../App.css'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 
 const Nav = styled.div`
 background-color: ${({ theme }) => theme.card_light};
@@ -133,13 +131,13 @@ height: 70%;
  display: flex;
  flex-direction: column;
  gap: 16px;
- postion: absolute;
- top: 0;
+ margin-top: 15rem;
  right: 0;
- height: 100%;
+ //min-height: 100vh;
  width: 100%;
- padding: 12px 40px 24px 40px;
- //background: ${({ theme }) => theme.primary};
+ transition-delay: 2s;
+ padding: 12px 40px 24px 40px;  
+ background: ${({ theme }) => theme.primary +50};
  transition: all 1s ease-in-out;
  transform: ${({open}) => open ? 'translateX(0)' : 'translateX(100%)'};
  border-radius: 0 0 20px 20px;
@@ -154,6 +152,7 @@ font-weight: 500;
 cursor: pointer;
 text-decoration: none;
 transition: all 0.2s ease-in-out;
+z-index: 3;
 hover {
   color: ${({ theme }) => theme.primary};
 }
@@ -177,13 +176,13 @@ const Navbar = () => {
             <DiCssdeck size="3rem"/><Span>Portfolio</Span>
           </a>
         </NavLogo>
+
         <MobileIcon>
-       
           {!open && <FaBars onClick = {() => {
             setOpen(!open)
-          }}/>}
-          
+          }}/>}  
         </MobileIcon>
+
         <NavItems>
           <NavLink href='/'>Home</NavLink>
           <NavLink href='#about'>About</NavLink>
@@ -192,16 +191,18 @@ const Navbar = () => {
           <NavLink href='#education'>Education</NavLink>
           <NavLink href='#contact'>Contact</NavLink>
         </NavItems>
+
         <ButtonContainer>
           <GithubButton><a className='githubProfile' style={{textDecoration: 'none'}} href={Bio.github} target='blank'>Github Profile </a></GithubButton>
         </ButtonContainer>
+
       </NavContainer>
 
       {
         open && 
         (<MobileMenu open = {open}>
 
-          <MobileMenuLinks style={{textAlign: 'right', padding: '5px 20px 0 0'}}>
+          <MobileMenuLinks style={{textAlign: 'right', padding: '0px 0px -5px -5px'}}>
 
           <i style={{color: "#ffffff", fontSize: '25px', fontWeight: 'bold'}} onClick = {() => {
             setOpen(!open)
@@ -212,11 +213,13 @@ const Navbar = () => {
           <MobileMenuLinks href="#about" onClick={()=> setOpen(!open)}>
             Home
           </MobileMenuLinks>
+
           <MobileMenuLinks
           href="#about" onClick={()=> setOpen(!open)}
           >
             About
           </MobileMenuLinks>
+
           <MobileMenuLinks
           href="#skills" onClick={()=> setOpen(!open)}
           >
@@ -240,10 +243,7 @@ const Navbar = () => {
           >
             Contact
           </MobileMenuLinks>
-
-          {/* <GithubButton>
-          <a className='githubProfile' style={{textDecoration: 'none'}} href={Bio.github} target='blank' onClick={()=> setOpen(!open)}>Github </a>
-          </GithubButton> */}
+  
         </MobileMenu>)
       }
     </Nav>

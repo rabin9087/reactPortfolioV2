@@ -1,4 +1,4 @@
-import resume from './Rabin_Shah_Resume.pdf';
+import resume from '../images/assets/Rabin_Shah_Resume.pdf';
 
 import weatherForecast from '../images/assets/weatherForecastIMG.png'
 import movieDb from '../images/assets/movieDb.png'
@@ -15,7 +15,7 @@ export const Bio = {
       "Front-end Developer",
       "Android Developer",
       "Programmer",
-      "MERE DEVELOPER"
+      "MERN DEVELOPER"
     ],
     description: "I'm a passionate and results-driven software developer with a focus on full-stack web development. I thrive on building intuitive and efficient applications that provide exceptional user experiences. With a strong foundation in the latest technologies and best practices, I'm dedicated to creating robust and scalable solutions.",
 
