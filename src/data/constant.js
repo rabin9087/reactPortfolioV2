@@ -1,4 +1,4 @@
-import resume from '../images/assets/Rabin_Shah_Resume.pdf';
+import resume from '../images/assets/Rabin_shah_resume.pdf';
 
 import weatherForecast from '../images/assets/weatherForecastIMG.png'
 import movieDb from '../images/assets/movieDb.png'
