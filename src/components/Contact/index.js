@@ -130,13 +130,14 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    emailjs.sendForm('', '', form.current, '')
-      .then((result) => {
-        setOpen(true);
-        form.current.reset();
-      }, (error) => {
-        console.log(error.text);
-      });
+    alert("This contact form is in progress, please email me at rabin9087@gmail.com to contact me \nThank You")
+    // emailjs.sendForm('', '', form.current, '')
+    //   .then((result) => {
+    //     setOpen(true);
+    //     form.current.reset();
+    //   }, (error) => {
+    //     console.log(error.text);
+    //   });
   }
 
 
@@ -157,7 +158,7 @@ const Contact = () => {
         <Snackbar
           open={open}
           autoHideDuration={6000}
-          onClose={()=>setOpen(false)}
+          onClose={() => setOpen(false)}
           message="Email sent successfully!"
           severity="success"
         />
