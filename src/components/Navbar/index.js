@@ -131,7 +131,7 @@ const MobileMenu = styled.div`
  display: flex;
  flex-direction: column;
  gap: 16px;
- margin-top: 30rem;
+ margin-top: 37rem;
  right: 0;
  min-height: 100vh;
  width: 100%;
@@ -145,6 +145,10 @@ background: #171733;
  box-shodow: 0 5px 10px rgb(0, 0, 0, 0.3);
  opacity: ${({ open }) => open ? '1' : '0'};
  z-index: ${({ open }) => open ? '1' : '-1'};
+
+ @media only screen and (max-width: 640px){
+  margin-top: 35rem;
+ }
  `;
 
 const MobileMenuLinks = styled.a`
