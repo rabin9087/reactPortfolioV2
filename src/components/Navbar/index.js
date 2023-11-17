@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
-import {Link as LinkR} from "react-router-dom"
+import { Link as LinkR } from "react-router-dom"
 import styled from 'styled-components';
-import {DiCssdeck} from 'react-icons/di';
-import {FaBars,} from 'react-icons/fa'
+import { DiCssdeck } from 'react-icons/di';
+import { FaBars, } from 'react-icons/fa'
 import { Bio } from '../../data/constant';
 import '../../App.css'
 
@@ -22,7 +22,7 @@ z-index: 10;
 }
 `;
 
-const NavContainer =styled.div `
+const NavContainer = styled.div`
 display: flex;
 justify-content: space-between;
 height: 60px;
@@ -45,7 +45,7 @@ align-items: center;
 }
 `;
 
- const MobileIcon = styled.div`
+const MobileIcon = styled.div`
  display: none;
  @media screen and (max-width: 768px){
   display: block;
@@ -55,11 +55,11 @@ align-items: center;
   transform: translate(-100%, 50%);
   font-size: 1.8rem;
   cursor:pointer;
-  color: ${({theme}) => theme.text_primary};
+  color: ${({ theme }) => theme.text_primary};
  }
  `;
 
- const NavItems = styled.ul`
+const NavItems = styled.ul`
  width: 100%;
  display: flex;
  justify-content: center;
@@ -74,8 +74,8 @@ align-items: center;
 }
  `;
 
- const NavLink = styled.a`
- color: ${({theme}) => theme.text_primary};
+const NavLink = styled.a`
+ color: ${({ theme }) => theme.text_primary};
  font-weight: 500;
  cursor: pointer;
  text-decoration: none;
@@ -87,7 +87,7 @@ align-items: center;
  }
  `;
 
- const ButtonContainer = styled.div `
+const ButtonContainer = styled.div`
  display:flex;
  align-items: center;
  justify-content:end;
@@ -99,9 +99,9 @@ align-items: center;
  }
  `;
 
- export const GithubButton = styled.button `
+export const GithubButton = styled.button`
  background-color: transparent;
- border: 1.8px solid ${({theme}) => theme.primary};
+ border: 1.8px solid ${({ theme }) => theme.primary};
  border-radius: 20px;
  display: flex;
  justify-content: center;
@@ -113,7 +113,7 @@ cursor: pointer;
 height: 70%;
 :hover {
   background-color: ${({ theme }) => theme.primary};
-  color: ${({theme}) => theme.white};
+  color: ${({ theme }) => theme.white};
 }
 
 @media only screen and (max-width: 640px){
@@ -121,29 +121,30 @@ height: 70%;
  }
  `;
 
- export const Span = styled.span `
+export const Span = styled.span`
  padding: 0 4px;
  font-weight: bold;
  font-size: 30px;
  `;
 
- const MobileMenu = styled.div`
+const MobileMenu = styled.div`
  display: flex;
  flex-direction: column;
  gap: 16px;
- margin-top: 15rem;
+ margin-top: 30rem;
  right: 0;
- //min-height: 100vh;
+ min-height: 100vh;
  width: 100%;
  transition-delay: 2s;
  padding: 12px 40px 24px 40px;  
- background: ${({ theme }) => theme.primary +50};
+//  background: ${({ theme }) => theme.primary};
+background: #171733;
  transition: all 1s ease-in-out;
- transform: ${({open}) => open ? 'translateX(0)' : 'translateX(100%)'};
+ transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(100%)'};
  border-radius: 0 0 20px 20px;
  box-shodow: 0 5px 10px rgb(0, 0, 0, 0.3);
- opacity: ${({open}) => open ? '1' : '0'};
- z-index: ${({open}) => open ? '1' : '-1'};
+ opacity: ${({ open }) => open ? '1' : '0'};
+ z-index: ${({ open }) => open ? '1' : '-1'};
  `;
 
 const MobileMenuLinks = styled.a`
@@ -161,7 +162,7 @@ hover {
 const Navbar = () => {
 
   const [open, setOpen] = useState(false);
-  
+
   return (
     <Nav>
       <NavContainer>
@@ -172,15 +173,15 @@ const Navbar = () => {
             color: "white",
             marginBottom: "20",
             cursor: "pointer"
-          }}> 
-            <DiCssdeck size="3rem"/><Span>Portfolio</Span>
+          }}>
+            <DiCssdeck size="3rem" /><Span>Portfolio</Span>
           </a>
         </NavLogo>
 
         <MobileIcon>
-          {!open && <FaBars onClick = {() => {
+          {!open && <FaBars onClick={() => {
             setOpen(!open)
-          }}/>}  
+          }} />}
         </MobileIcon>
 
         <NavItems>
@@ -193,57 +194,57 @@ const Navbar = () => {
         </NavItems>
 
         <ButtonContainer>
-          <GithubButton><a className='githubProfile' style={{textDecoration: 'none'}} href={Bio.github} target='blank'>Github Profile </a></GithubButton>
+          <GithubButton><a className='githubProfile' style={{ textDecoration: 'none' }} href={Bio.github} target='blank'>Github Profile </a></GithubButton>
         </ButtonContainer>
 
       </NavContainer>
 
       {
-        open && 
-        (<MobileMenu open = {open}>
+        open &&
+        (<MobileMenu open={open}>
 
-          <MobileMenuLinks style={{textAlign: 'right', padding: '0px 0px -5px -5px'}}>
+          <MobileMenuLinks style={{ textAlign: 'right', padding: '0px 0px -5px -5px' }}>
 
-          <i style={{color: "#ffffff", fontSize: '25px', fontWeight: 'bold'}} onClick = {() => {
-            setOpen(!open)
-          }}>X</i>
-         
-          </MobileMenuLinks>  
+            <i style={{ color: "#ffffff", fontSize: '25px', fontWeight: 'bold' }} onClick={() => {
+              setOpen(!open)
+            }}>X</i>
 
-          <MobileMenuLinks href="#about" onClick={()=> setOpen(!open)}>
+          </MobileMenuLinks>
+
+          <MobileMenuLinks href="#about" onClick={() => setOpen(!open)}>
             Home
           </MobileMenuLinks>
 
           <MobileMenuLinks
-          href="#about" onClick={()=> setOpen(!open)}
+            href="#about" onClick={() => setOpen(!open)}
           >
             About
           </MobileMenuLinks>
 
           <MobileMenuLinks
-          href="#skills" onClick={()=> setOpen(!open)}
+            href="#skills" onClick={() => setOpen(!open)}
           >
             Skills
           </MobileMenuLinks>
-          
+
           <MobileMenuLinks
-          href="#projects" onClick={()=> setOpen(!open)}
+            href="#projects" onClick={() => setOpen(!open)}
           >
             Projects
           </MobileMenuLinks>
 
           <MobileMenuLinks
-          href="#education" onClick={()=> setOpen(!open)}
+            href="#education" onClick={() => setOpen(!open)}
           >
             Education
           </MobileMenuLinks>
 
           <MobileMenuLinks
-          href="#contact" onClick={()=> setOpen(!open)}
+            href="#contact" onClick={() => setOpen(!open)}
           >
             Contact
           </MobileMenuLinks>
-  
+
         </MobileMenu>)
       }
     </Nav>

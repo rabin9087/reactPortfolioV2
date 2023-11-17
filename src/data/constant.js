@@ -17,7 +17,7 @@ export const Bio = {
     "Programmer",
     "MERN DEVELOPER"
   ],
-  description: "I'm a passionate and results-driven software developer with a focus on full-stack web development. I thrive on building intuitive and efficient applications that provide exceptional user experiences. With a strong foundation in the latest technologies and best practices, I'm dedicated to creating robust and scalable solutions.",
+  description: "I'm a passionate and result-driven software developer with a focus on full-stack web development. I thrive on building intuitive and efficient applications that provide exceptional user experiences. With a strong foundation in the latest technologies and best practices, I'm dedicated to creating robust and scalable solutions.",
 
   github: "https://github.com/rabin9087",
   resume:
@@ -377,8 +377,8 @@ export const projects = [
       "Node Js",
       "Express Js",],
     category: "web app",
-    github: "https://github.com/rabin9087/reactNotTODOList",
-    webapp: "https://react-not-todo-list.vercel.app/",
+    github: "https://github.com/rabin9087/ntdl_full_stack",
+    webapp: "https://tasklist-o98r.onrender.com/",
     // member: [
     //   {
     //     name: "Rishav Chanda",
