@@ -131,7 +131,7 @@ const MobileMenu = styled.div`
  display: flex;
  flex-direction: column;
  gap: 16px;
- margin-top: 37rem;
+ margin-top: 41rem;
  right: 0;
  min-height: 100vh;
  width: 100%;
@@ -146,8 +146,28 @@ background: #171733;
  opacity: ${({ open }) => open ? '1' : '0'};
  z-index: ${({ open }) => open ? '1' : '-1'};
 
+ @media only screen and (max-width: 768px){
+  margin-top: 60rem;
+ }
+
  @media only screen and (max-width: 640px){
-  margin-top: 35rem;
+  margin-top: 70rem;
+ }
+
+ @media only screen and (max-width: 430px){
+  margin-top: 54rem;
+ }
+
+  @media only screen and (max-width: 390px){
+  margin-top: 49rem;
+ }
+ 
+ @media only screen and (max-width: 375px){
+  margin-top: 38rem;
+ }
+
+  @media only screen and (max-width: 360px){
+  margin-top: 42rem;
  }
  `;
 
