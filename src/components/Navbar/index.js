@@ -80,10 +80,12 @@ const NavLink = styled.a`
  cursor: pointer;
  text-decoration: none;
  transition : all 0.2s ease-in-out;
+
  :hover {
-  padding: 5px 25px 5px 25px;
-  border-radius: 20px;
-  background-color: ${({ theme }) => theme.primary};
+  color: ${({ theme }) => theme.text_primary + 100};
+  // padding: 5px 25px 5px 25px;
+//  border-radius: 20px;
+//   background-color: ${({ theme }) => theme.primary};
  }
  `;
 
@@ -104,6 +106,7 @@ export const GithubButton = styled.button`
  border: 1.8px solid ${({ theme }) => theme.primary};
  border-radius: 20px;
  display: flex;
+ color: ${({ theme }) => theme.white};
  justify-content: center;
  align-items: center;
  padding: 0px 20px;
@@ -113,10 +116,10 @@ cursor: pointer;
 height: 70%;
 :hover {
   background-color: ${({ theme }) => theme.primary};
-  color: ${({ theme }) => theme.white};
+ 
 }
 
-@media only screen and (max-width: 640px){
+@media only screen and (min-width: 640px){
   font-size: 0.8rem;
  }
  `;
@@ -147,27 +150,31 @@ background: #171733;
  z-index: ${({ open }) => open ? '1' : '-1'};
 
  @media only screen and (max-width: 768px){
-  margin-top: 60rem;
+  margin-top: 58rem;
  }
 
  @media only screen and (max-width: 640px){
-  margin-top: 70rem;
+  margin-top: 68rem;
  }
 
  @media only screen and (max-width: 430px){
-  margin-top: 54rem;
+  margin-top: 53rem;
+ }
+
+@media only screen and (max-width: 414px){
+  margin-top: 50rem;
  }
 
   @media only screen and (max-width: 390px){
-  margin-top: 49rem;
+  margin-top: 47rem;
  }
  
  @media only screen and (max-width: 375px){
-  margin-top: 38rem;
+  margin-top: 36rem;
  }
 
   @media only screen and (max-width: 360px){
-  margin-top: 42rem;
+  margin-top: 40rem;
  }
  `;
 
@@ -209,25 +216,25 @@ const Navbar = () => {
         </MobileIcon>
 
         <NavItems>
-          <NavLink href='/'>Home</NavLink>
-          <NavLink href='#about'>About</NavLink>
+          <NavLink href='#about'>Home</NavLink>
+          {/* <NavLink href='#about'>About</NavLink> */}
           <NavLink href='#skills'>SKills</NavLink>
           <NavLink href='#projects'>Projects</NavLink>
           <NavLink href='#education'>Education</NavLink>
           <NavLink href='#contact'>Contact</NavLink>
         </NavItems>
-
-        <ButtonContainer>
-          <GithubButton><a className='githubProfile' style={{ textDecoration: 'none' }} href={Bio.github} target='blank'>Github Profile </a></GithubButton>
-        </ButtonContainer>
-
+        <NavItems>
+          <ButtonContainer>
+            <GithubButton><a className='githubProfile' style={{ textDecoration: 'none', color: 'white' }} href={Bio.github} target='blank'>Github Profile </a></GithubButton>
+          </ButtonContainer>
+        </NavItems>
       </NavContainer>
 
       {
         open &&
         (<MobileMenu open={open}>
 
-          <MobileMenuLinks style={{ textAlign: 'right', padding: '0px 0px -5px -5px' }}>
+          <MobileMenuLinks style={{ textAlign: 'right', padding: '0px 0px -5px -5px', marginTop: '1rem' }}>
 
             <i style={{ color: "#ffffff", fontSize: '25px', fontWeight: 'bold' }} onClick={() => {
               setOpen(!open)

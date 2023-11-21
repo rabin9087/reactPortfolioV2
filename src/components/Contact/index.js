@@ -120,6 +120,23 @@ const ContactButton = styled.input`
   font-weight: 600;
 `
 
+const ContactEmail = styled.a`
+  width: 100%;
+  text-decoration: none;
+  text-align: center;
+  background: hsla(271, 100%, 50%, 1);
+  background: linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
+  background: -moz-linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
+  background: -webkit-linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
+  padding: 13px 16px;
+  margin-top: 2px;
+  border-radius: 12px;
+  border: none;
+  color: ${({ theme }) => theme.text_primary};
+  font-size: 18px;
+  font-weight: 600;
+`
+
 
 
 const Contact = () => {
@@ -130,7 +147,7 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert("This contact form is in progress, please email me at rabin9087@gmail.com to contact me \nThank You")
+    // alert("This contact form is in progress, please email me at rabin9087@gmail.com to contact me \nThank You")
     // emailjs.sendForm('', '', form.current, '')
     //   .then((result) => {
     //     setOpen(true);
@@ -138,6 +155,9 @@ const Contact = () => {
     //   }, (error) => {
     //     console.log(error.text);
     //   });
+
+    window.open('mailto:rabin9087@gmail.com');
+
   }
 
 
@@ -149,11 +169,15 @@ const Contact = () => {
         <Desc>Feel free to reach out to me for any questions or opportunities!</Desc>
         <ContactForm ref={form} onSubmit={handleSubmit}>
           <ContactTitle>Email Me 🚀</ContactTitle>
-          <ContactInput placeholder="Your Email" name="from_email" />
+          {/* <ContactInput placeholder="Your Email" name="from_email" />
           <ContactInput placeholder="Your Name" name="from_name" />
           <ContactInput placeholder="Subject" name="subject" />
-          <ContactInputMessage placeholder="Message" rows="4" name="message" />
-          <ContactButton type="submit" value="Send" />
+          <ContactInputMessage placeholder="Message" rows="4" name="message" /> */}
+          <ContactButton type="submit" value="rabin9087@gmail.com" />
+
+
+          {/* <ContactTitle>Phone Me 🚀</ContactTitle>
+          <ContactButton type="submit" value="0481 452 920" /> */}
         </ContactForm>
         <Snackbar
           open={open}
