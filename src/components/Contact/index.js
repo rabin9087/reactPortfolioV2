@@ -159,11 +159,13 @@ const Contact = () => {
         <Desc>Feel free to reach out to me for any questions or opportunities!</Desc>
         <ContactForm ref={form} onSubmit={handleSubmit}>
           <ContactTitle>Email Me 🚀</ContactTitle>
-         
-          <ContactButton type="submit" value="rabin9087@gmail.com" />
+
+          <ContactButton type="submit" value="rabin9087@gmail.com" >
+            rabin9087@gmail.com
+          </ContactButton>
 
 
-         
+
         </ContactForm>
         <Snackbar
           open={open}
