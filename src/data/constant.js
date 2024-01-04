@@ -6,6 +6,8 @@ import notTodoList from '../images/assets/notToDOList.png'
 import unitConverter from '../images/assets/unitConverter.png'
 import portfolioV1 from '../images/assets/portfolioV1.png'
 import android1 from '../images/assets/android1.png'
+import financeMangement from '../images/assets/transactionManagement.png'
+import libraryManagemant from '../images/assets/libraryManagement.png'
 
 export const Bio = {
   name: "Rabin Shah",
@@ -262,63 +264,43 @@ export const education = [
 ];
 
 export const projects = [
+
   {
     id: 0,
-    title: "Weather Forecast",
-    date: "Oct 2023",
+    title: "Library Managemant System",
+    date: "Nov 2023 - Dec 2023",
     description:
-      "This is weather forecast web apps. You can search weather of any city jusy by searching city name",
+      "In this application, you can post new books when you signup as an admin, users can burrow books and can give review of book after return.",
     image:
-      weatherForecast,
+      libraryManagemant,
     tags: [
-      "HTML", "CSS", "Javascript", "Bootstrap",
-      "React Js",
+      "HTML", "CSS", "Javascript", "Bootstrap", "React-Bootstrap",
+      "React Js", "MongoDB",
 
     ],
     category: "web app",
-    github: "https://github.com/rabin9087/weatherForecast",
-    webapp: "https://weather-forecast-pearl.vercel.app/",
+    github: "https://github.com/rabin9087/library-management-ui",
+    webapp: "https://library-management-ui.vercel.app/",
   },
   {
     id: 1,
-    title: "Movie Collection",
-    date: "Sept 2023",
-    description: "This is movie collection Database. You can find any movie here and you can listed them as a happy or action movie for you.",
+    title: "Finance Management System",
+    date: "Oct 2023 - Nov 2023",
+    description:
+      "In this application, you can manage your every transaction. You can add transaction according to income and expenses.",
     image:
-      movieDb,
-    tags: ["HTML", "CSS", "Javascript", "Bootstrap", "React Js",],
-    category: "web app",
-    github: "https://github.com/rabin9087/Movie_Finder_API",
-    webapp: "https://movie-finder-api.vercel.app/",
-    // member: [
-    //   {
-    //     // name: "Rabin Shah",
-    //     // img: "",
-    //     // linkedin: "",
-    //     // github: "",
-    //   },
-    //   {
+      financeMangement,
+    tags: [
+      "HTML", "CSS", "Javascript", "Bootstrap", "React-Bootstrap",
+      "React Js", "MongoDB",
 
-    //   },
-    // ],
+    ],
+    category: "web app",
+    github: "https://github.com/rabin9087/frontendFinanceManagement",
+    webapp: "https://frontend-finance-management.vercel.app/",
   },
   {
     id: 2,
-    title: "Prank Calculator",
-    date: "Sept 2023",
-    description: "This is a prank calulator. It work as a Calulator",
-    image:
-      prankCalculator,
-
-    tags: [
-      "HTML", "CSS", "Javascript", "Bootstrap", "React Js"
-    ],
-    category: "web app",
-    github: "https://github.com/rabin9087/prankCalculator",
-    webapp: "https://prank-calculator-95obhprwd-rabins-projects.vercel.app/",
-  },
-  {
-    id: 3,
     title: "Not todo List",
     date: "Oct 2023",
     description: "This is not todo list web app. You can add a task you have done including the hours taken to do it. Later on you can add categories that task either as a todo task or not todo task.",
@@ -347,7 +329,47 @@ export const projects = [
     // ],
   },
   {
+    id: 3,
+    title: "Movie Collection",
+    date: "Sept 2023",
+    description: "This is movie collection Database. You can find any movie here and you can listed them as a happy or action movie for you.",
+    image:
+      movieDb,
+    tags: ["HTML", "CSS", "Javascript", "Bootstrap", "React Js",],
+    category: "web app",
+    github: "https://github.com/rabin9087/Movie_Finder_API",
+    webapp: "https://movie-finder-api.vercel.app/",
+    // member: [
+    //   {
+    //     // name: "Rabin Shah",
+    //     // img: "",
+    //     // linkedin: "",
+    //     // github: "",
+    //   },
+    //   {
+
+    //   },
+    // ],
+  },
+
+  {
     id: 4,
+    title: "Prank Calculator",
+    date: "Sept 2023",
+    description: "This is a prank calulator. It work as a Calulator",
+    image:
+      prankCalculator,
+
+    tags: [
+      "HTML", "CSS", "Javascript", "Bootstrap", "React Js"
+    ],
+    category: "web app",
+    github: "https://github.com/rabin9087/prankCalculator",
+    webapp: "https://prank-calculator-95obhprwd-rabins-projects.vercel.app/",
+  },
+
+  {
+    id: 5,
     title: "Unit Converter",
     date: "Aug 2023",
     description: "This is unit converter web app. You can convert unit of Length, Area, Volume, Weight, Temperature and Time into another unit",
@@ -359,7 +381,24 @@ export const projects = [
     webapp: "https://vercel.com/rabins-projects/unitconverter",
   },
   {
-    id: 5,
+    id: 6,
+    title: "Weather Forecast",
+    date: "Oct 2023",
+    description:
+      "This is weather forecast web apps. You can search weather of any city jusy by searching city name",
+    image:
+      weatherForecast,
+    tags: [
+      "HTML", "CSS", "Javascript", "Bootstrap",
+      "React Js",
+
+    ],
+    category: "web app",
+    github: "https://github.com/rabin9087/weatherForecast",
+    webapp: "https://weather-forecast-pearl.vercel.app/",
+  },
+  {
+    id: 7,
     title: "Portfolio Version 1",
     date: "Oct 2023",
     description:
@@ -372,7 +411,7 @@ export const projects = [
     webapp: "https://react-portfolio-virid-beta.vercel.app/",
   },
   {
-    id: 6,
+    id: 8,
     title: "NepService",
     date: "Feb 2022 to July 2022",
     description:
@@ -384,7 +423,7 @@ export const projects = [
     webapp: "https://www.linkedin.com/posts/rabin-shah-175a20117_android-activity-7047740802977976320-jj4I?utm_source=share&utm_medium=member_desktop",
   },
   {
-    id: 7,
+    id: 9,
     title: "Student Details",
     date: "Oct 2021",
     description:
@@ -396,19 +435,6 @@ export const projects = [
     webapp: "https://github.com/rabin9087/StudentID",
   },
 
-
-  // {
-  //   id: 7,
-  //   title: "Face Recognition",
-  //   date: "Jan 2021",
-  //   description:
-  //     "A Face recognition python app made with OpenCV. It uses face_recognition library to detect faces. It uses the webcam to detect faces. It also has a search bar to search for a particular face.",
-  //   image: "",
-  //   tags: ["Python", "Keras", "TensorFlow", "VGG16", "Pickle", "React"],
-  //   category: "machine learning",
-  //   github: "",
-  //   webapp: "",
-  // },
 ];
 
 export const TimeLineData = [

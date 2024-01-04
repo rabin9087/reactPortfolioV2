@@ -103,7 +103,7 @@ const ContactInputMessage = styled.textarea`
   }
 `
 
-const ContactButton = styled.input`
+const ContactButton = styled.a`
   width: 100%;
   text-decoration: none;
   text-align: center;
@@ -147,16 +147,6 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // alert("This contact form is in progress, please email me at rabin9087@gmail.com to contact me \nThank You")
-    // emailjs.sendForm('', '', form.current, '')
-    //   .then((result) => {
-    //     setOpen(true);
-    //     form.current.reset();
-    //   }, (error) => {
-    //     console.log(error.text);
-    //   });
-
-    window.open('mailto:rabin9087@gmail.com');
 
   }
 
@@ -169,15 +159,11 @@ const Contact = () => {
         <Desc>Feel free to reach out to me for any questions or opportunities!</Desc>
         <ContactForm ref={form} onSubmit={handleSubmit}>
           <ContactTitle>Email Me 🚀</ContactTitle>
-          {/* <ContactInput placeholder="Your Email" name="from_email" />
-          <ContactInput placeholder="Your Name" name="from_name" />
-          <ContactInput placeholder="Subject" name="subject" />
-          <ContactInputMessage placeholder="Message" rows="4" name="message" /> */}
+         
           <ContactButton type="submit" value="rabin9087@gmail.com" />
 
 
-          {/* <ContactTitle>Phone Me 🚀</ContactTitle>
-          <ContactButton type="submit" value="0481 452 920" /> */}
+         
         </ContactForm>
         <Snackbar
           open={open}

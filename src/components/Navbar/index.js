@@ -82,7 +82,7 @@ const NavLink = styled.a`
  transition : all 0.2s ease-in-out;
 
  :hover {
-  color: ${({ theme }) => theme.text_primary + 100};
+  // color: ${({ theme }) => theme.text_primary + 100};
   // padding: 5px 25px 5px 25px;
 //  border-radius: 20px;
 //   background-color: ${({ theme }) => theme.primary};
