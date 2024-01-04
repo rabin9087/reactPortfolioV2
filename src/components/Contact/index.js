@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import { Snackbar } from '@mui/material';
+import Alert from 'react-bootstrap/Alert'
 
 const Container = styled.div`
 display: flex;
@@ -103,7 +104,7 @@ const ContactInputMessage = styled.textarea`
   }
 `
 
-const ContactButton = styled.a`
+const ContactButton = styled.button`
   width: 100%;
   text-decoration: none;
   text-align: center;
@@ -143,15 +144,22 @@ const Contact = () => {
 
   //hooks
   const [open, setOpen] = React.useState(false);
-  const form = useRef();
+  const form = useRef(null);
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    emailjs.sendForm('service_1pkm37q', 'template_ep2enid', form.current, '2ADaDuUx9So9tB7G_')
+      .then((result) => {
+
+        form.current.reset();
+
+        alert("Email has been sent!")
+      }, (error) => {
+        alert("Failed to send Email, Please try again!")
+      })
+
   }
-
-
-
   return (
     <Container id='contact'>
       <Wrapper>
@@ -159,11 +167,11 @@ const Contact = () => {
         <Desc>Feel free to reach out to me for any questions or opportunities!</Desc>
         <ContactForm ref={form} onSubmit={handleSubmit}>
           <ContactTitle>Email Me 🚀</ContactTitle>
-
-          <ContactButton type="submit" value="rabin9087@gmail.com" />
-
-
-
+          <ContactInput type='text' placeholder='Full Name' name='from_name' required />
+          <ContactInput type='email' placeholder='Email' name='user_email' required />
+          <ContactInput type='text' placeholder='Subject' name='subject' required />
+          <ContactInputMessage type='required' placeholder='Message' name='message' required />
+          <ContactButton type="submit">Send</ContactButton>
         </ContactForm>
         <Snackbar
           open={open}
