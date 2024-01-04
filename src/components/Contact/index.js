@@ -160,9 +160,7 @@ const Contact = () => {
         <ContactForm ref={form} onSubmit={handleSubmit}>
           <ContactTitle>Email Me 🚀</ContactTitle>
 
-          <ContactButton type="submit" value="rabin9087@gmail.com" >
-            rabin9087@gmail.com
-          </ContactButton>
+          <ContactButton type="submit" value="rabin9087@gmail.com" />
 
 
 
