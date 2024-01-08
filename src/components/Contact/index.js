@@ -149,7 +149,7 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm('service_1pkm37q', 'template_ep2enid', form.current, '2ADaDuUx9So9tB7G_')
+    emailjs.sendForm(process.env.SERVICE_ID, process.env.TEMPLETE_ID, form.current, process.env.PUBLIC_KEY)
       .then((result) => {
 
         form.current.reset();
