@@ -5,7 +5,7 @@ import ProjectCard from '../Cards/ProjectsCards'
 import { projects } from '../../data/constant'
 
 
-const Projects = ({openModal,setOpenModal}) => {
+const Projects = ({ openModal, setOpenModal }) => {
   const [toggle, setToggle] = useState('all');
   return (
     <Container id="projects">
@@ -32,22 +32,16 @@ const Projects = ({openModal,setOpenModal}) => {
             :
             <ToggleButton value="android app" onClick={() => setToggle('android app')}>ANDROID APP'S</ToggleButton>
           }
-          {/* <Divider /> */}
-          {/* {toggle === 'machine learning' ?
-            <ToggleButton active value="machine learning" onClick={() => setToggle('machine learning')}>MACHINE LEARNING</ToggleButton>
-            :
-            <ToggleButton value="machine learning" onClick={() => setToggle('machine learning')}>MACHINE LEARNING</ToggleButton>
-          } */}
         </ToggleButtonGroup>
         <CardContainer>
           {toggle === 'all' && projects
             .map((project, i) => (
-              <ProjectCard key={i} project={project} openModal={openModal} setOpenModal={setOpenModal}/>
+              <ProjectCard key={i} project={project} openModal={openModal} setOpenModal={setOpenModal} />
             ))}
           {projects
             .filter((item) => item.category === toggle)
             .map((project, i) => (
-              <ProjectCard key={i} project={project} openModal={openModal} setOpenModal={setOpenModal}/>
+              <ProjectCard key={i} project={project} openModal={openModal} setOpenModal={setOpenModal} />
             ))}
         </CardContainer>
       </Wrapper>

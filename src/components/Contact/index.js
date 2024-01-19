@@ -1,9 +1,9 @@
-import React, { useState } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import { Snackbar } from '@mui/material';
-import Alert from 'react-bootstrap/Alert'
+
 
 const Container = styled.div`
 display: flex;
@@ -34,7 +34,7 @@ gap: 12px;
 
 const Title = styled.div`
 font-size: 42px;
-text-align: center;
+text-align: left;
 font-weight: 600;
 margin-top: 20px;
   color: ${({ theme }) => theme.text_primary};
@@ -149,14 +149,14 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm(process.env.SERVICE_ID, process.env.TEMPLETE_ID, form.current, process.env.PUBLIC_KEY)
+    emailjs.sendForm('service_1pkm37q', 'template_ep2enid', form.current, 'jocagDv1FnPvufZWk')
       .then((result) => {
-        console.log(form)
+
         form.current.reset();
 
-        alert("Email has been sent!")
+        alert("Message has been sent!")
       }, (error) => {
-        alert("Failed to send Email, Please try again!")
+        alert("Failed to send Message, Please try again!")
       })
 
   }
@@ -165,8 +165,10 @@ const Contact = () => {
       <Wrapper>
         <Title>Contact</Title>
         <Desc>Feel free to reach out to me for any questions or opportunities!</Desc>
+        <Desc>Email : rabin9087@gmail.com</Desc>
+        <Desc>Phone: 0481 452 920</Desc>
         <ContactForm ref={form} onSubmit={handleSubmit}>
-          <ContactTitle>Email Me 🚀</ContactTitle>
+          <ContactTitle>Send Me a Message 🚀</ContactTitle>
           <ContactInput type='text' placeholder='Full Name' name='from_name' required />
           <ContactInput type='email' placeholder='Email' name='user_email' required />
           <ContactInput type='text' placeholder='Subject' name='subject' required />

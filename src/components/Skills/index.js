@@ -2,9 +2,9 @@ import React from 'react'
 import styled from 'styled-components'
 import { skills } from '../../data/constant'
 
-const Skills = () => {
 
-  const Container = styled.div`
+
+const Container = styled.div`
 display: flex;
 flex-direction: column;
 justify-content: center;
@@ -39,7 +39,7 @@ margin-top: 12px;
   }
 `;
 
- const Desc = styled.div`
+const Desc = styled.div`
     font-size: 18px;
     text-align: center;
     max-width: 600px;
@@ -119,7 +119,7 @@ const SkillImage = styled.img`
   width: 24px;
   height: 24px;
 `
-
+const Skills = () => {
   return (
     <Container id="skills">
       <Wrapper>
@@ -131,9 +131,9 @@ const SkillImage = styled.img`
             <Skill key={i}>
               <SkillTitle>{skill.title}</SkillTitle>
               <SkillList>
-                {skill.skills.map((item) => (
-                  <SkillItem key={i}>
-                    <SkillImage src={item.image}/>
+                {skill.skills.map((item, index) => (
+                  <SkillItem key={index}>
+                    <SkillImage src={item.image} />
                     {item.name}
                   </SkillItem>
                 ))}

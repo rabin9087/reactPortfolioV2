@@ -39,28 +39,28 @@ function App() {
   const [darkMode, setDarkMode] = useState(true);
   const [openModal, setOpenModal] = useState({ state: false, project: null });
   return (
-  <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
-    <Router>
-    <Navbar/>
-      <Body>
-        <Hero/>
-        <Wrapper>
-        <Skills/>
-        {/* <Expirence/> */}
-        </Wrapper>
-        <Projects openModal={openModal} setOpenModal={setOpenModal}/>
-        <Wrapper>
-        <Education/>
-        <Contact/>
-        </Wrapper>
-        <Footer/>
-        {openModal.state &&
+    <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
+      <Router>
+        <Navbar />
+        <Body>
+          <Hero />
+          <Wrapper>
+            <Skills />
+            {/* <Expirence/> */}
+          </Wrapper>
+          <Projects openModal={openModal} setOpenModal={setOpenModal} />
+          <Wrapper>
+            <Education />
+            <Contact />
+          </Wrapper>
+          <Footer />
+          {openModal.state &&
             <ProjectDetails openModal={openModal} setOpenModal={setOpenModal} />
           }
-      </Body>
-    </Router>
-    </ThemeProvider> 
-    );
+        </Body>
+      </Router>
+    </ThemeProvider>
+  );
 }
 
 export default App;
