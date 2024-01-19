@@ -2,11 +2,8 @@ import React, { useState } from 'react'
 import styled from 'styled-components';
 import { Bio } from '../../data/constant';
 import Typewriter from 'typewriter-effect';
-import { Link as LinkR } from "react-router-dom"
 import image from '../../images/rabinProfile.png';
 import HeroBgAnimation from '../HeroBgAnimation'
-import { GithubButton } from '../Navbar';
-import { motion } from "framer-motion"
 
 const HeroContainer = styled.div`
 background-color: ${({ theme }) => theme.card_light};

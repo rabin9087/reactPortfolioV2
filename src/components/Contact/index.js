@@ -151,7 +151,7 @@ const Contact = () => {
 
     emailjs.sendForm(process.env.SERVICE_ID, process.env.TEMPLETE_ID, form.current, process.env.PUBLIC_KEY)
       .then((result) => {
-
+        console.log(form)
         form.current.reset();
 
         alert("Email has been sent!")
