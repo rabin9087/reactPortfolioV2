@@ -54,3 +54,15 @@ body{
     background-color:#854CE6;
     color: white
   }
+
+  .slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+  }
+
+  /* .carousel img {
+    width: 40vh;
+    max-height: auto;
+    object-fit: cover;
+  } */
