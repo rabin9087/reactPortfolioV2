@@ -3,9 +3,11 @@ import { useState } from 'react'
 import { Container, Wrapper, Title, Desc, CardContainer, ToggleButtonGroup, ToggleButton, Divider } from './ProjectsStyle'
 import ProjectCard from '../Cards/ProjectsCards'
 import { projects } from '../../data/constant'
+import Carousel from "react-bootstrap/Carousel";
+import { Col, Row } from 'react-bootstrap';
 
 
-const Projects = ({ openModal, setOpenModal }) => {
+const TrialProjects = ({ openModal, setOpenModal }) => {
   const [toggle, setToggle] = useState('all');
   return (
     <Container id="projects">
@@ -38,16 +40,25 @@ const Projects = ({ openModal, setOpenModal }) => {
             .map((project, i) => (
               <ProjectCard key={i} project={project} openModal={openModal} setOpenModal={setOpenModal} />
             ))}
-          {projects
-            .filter((item) => item.category === toggle)
-            .map((project, i) => (
-
-              <ProjectCard key={i} project={project} openModal={openModal} setOpenModal={setOpenModal} />
-            ))}
+          <Container fluid>
+            <Row>
+              <Col>
+                <Carousel data-bs-theme="dark" interval={1000}>
+                  {projects
+                    .filter((item) => item.category === toggle)
+                    .map((project, i) => (
+                      <Carousel.Item style={{ width: "90%" }}>
+                        <ProjectCard key={i} project={project} openModal={openModal} setOpenModal={setOpenModal} />
+                      </Carousel.Item>
+                    ))}
+                </Carousel>
+              </Col>
+            </Row>
+          </Container>
         </CardContainer>
       </Wrapper>
     </Container>
   )
 }
 
-export default Projects
+export default TrialProjects

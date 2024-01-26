@@ -12,7 +12,6 @@ import Footer from './components/Footer';
 import Expirence from './components/Expirence';
 import { useState } from 'react';
 import ProjectDetails from './components/Projects/ProjectDetails';
-import CarouselSkills from './components/Skills/indexCarousel';
 
 const Body = styled.div`
   background-color: ${({ theme }) => theme.bg};
@@ -47,7 +46,6 @@ function App() {
           <Hero />
           <Wrapper>
             <Skills />
-            {/* <CarouselSkills /> */}
             <Expirence />
           </Wrapper>
           <Projects openModal={openModal} setOpenModal={setOpenModal} />
