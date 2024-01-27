@@ -4,6 +4,7 @@ import { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import { Snackbar } from '@mui/material';
 
+
 const Container = styled.div`
 display: flex;
 flex-direction: column;
@@ -33,7 +34,7 @@ gap: 12px;
 
 const Title = styled.div`
 font-size: 42px;
-text-align: center;
+text-align: left;
 font-weight: 600;
 margin-top: 20px;
   color: ${({ theme }) => theme.text_primary};
@@ -103,7 +104,24 @@ const ContactInputMessage = styled.textarea`
   }
 `
 
-const ContactButton = styled.input`
+const ContactButton = styled.button`
+  width: 100%;
+  text-decoration: none;
+  text-align: center;
+  background: hsla(271, 100%, 50%, 1);
+  background: linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
+  background: -moz-linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
+  background: -webkit-linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
+  padding: 13px 16px;
+  margin-top: 2px;
+  border-radius: 12px;
+  border: none;
+  color: ${({ theme }) => theme.text_primary};
+  font-size: 18px;
+  font-weight: 600;
+`
+
+const ContactEmail = styled.a`
   width: 100%;
   text-decoration: none;
   text-align: center;
@@ -126,33 +144,40 @@ const Contact = () => {
 
   //hooks
   const [open, setOpen] = React.useState(false);
-  const form = useRef();
+  const form = useRef(null);
 
   const handleSubmit = (e) => {
     e.preventDefault();
+<<<<<<< HEAD
     emailjs.sendForm(process.env.EMAIL_SERVICE_ID, 'template_nv7k7mj', form.current, 'SybVGsYS52j2TfLbi')
+=======
+
+    emailjs.sendForm('service_1pkm37q', 'template_ep2enid', form.current, 'jocagDv1FnPvufZWk')
+>>>>>>> main
       .then((result) => {
-        setOpen(true);
+
         form.current.reset();
+
+        alert("Message has been sent!")
       }, (error) => {
-        console.log(error.text);
-      });
+        alert("Failed to send Message, Please try again!")
+      })
+
   }
-
-
-
   return (
     <Container id='contact'>
       <Wrapper>
         <Title>Contact</Title>
         <Desc>Feel free to reach out to me for any questions or opportunities!</Desc>
+        <Desc>Email : rabin9087@gmail.com</Desc>
+        <Desc>Phone: 0481 452 920</Desc>
         <ContactForm ref={form} onSubmit={handleSubmit}>
-          <ContactTitle>Email Me 🚀</ContactTitle>
-          <ContactInput placeholder="Your Email" name="from_email" />
-          <ContactInput placeholder="Your Name" name="from_name" />
-          <ContactInput placeholder="Subject" name="subject" />
-          <ContactInputMessage placeholder="Message" rows="4" name="message" />
-          <ContactButton type="submit" value="Send" />
+          <ContactTitle>Send Me a Message 🚀</ContactTitle>
+          <ContactInput type='text' placeholder='Full Name' name='from_name' required />
+          <ContactInput type='email' placeholder='Email' name='user_email' required />
+          <ContactInput type='text' placeholder='Subject' name='subject' required />
+          <ContactInputMessage type='required' placeholder='Message' name='message' required />
+          <ContactButton type="submit">Send</ContactButton>
         </ContactForm>
         <Snackbar
           open={open}

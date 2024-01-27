@@ -3,6 +3,7 @@ import { Modal } from '@mui/material';
 import React from 'react'
 import styled from 'styled-components'
 
+
 const Container = styled.div`
 width: 100%;
 height: 100%;
@@ -206,32 +207,13 @@ const ProjectDetails = ({ openModal, setOpenModal }) => {
                         ))}
                     </Tags>
                     <Desc>{project?.description}</Desc>
-                    {/* {project.member && (
-                        <>
-                            <Label>Members</Label>
-                            <Members>
-                                {project?.member.map((member, i) => (
-                                    <Member key={i}>
-                                        <MemberImage src={member.img} />
-                                        <MemberName>{member.name}</MemberName>
-                                        <a href={member.github} target="new" style={{textDecoration: 'none', color: 'inherit'}}>
-                                            <GitHub />
-                                        </a>
-                                        <a href={member.linkedin} target="new" style={{textDecoration: 'none', color: 'inherit'}}>
-                                            <LinkedIn />
-                                        </a>
-                                    </Member>
-                                ))}
-                            </Members>
-                        </>
-                    )} */}
+
                     <ButtonGroup>
                         <Button dull href={project?.github} target='new'>View Code</Button>
                         <Button href={project?.webapp} target='new'>View Live App</Button>
                     </ButtonGroup>
                 </Wrapper>
             </Container>
-
         </Modal>
     )
 }

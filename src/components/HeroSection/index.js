@@ -1,13 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components';
 import { Bio } from '../../data/constant';
 import Typewriter from 'typewriter-effect';
 import image from '../../images/rabinProfile.png';
 import HeroBgAnimation from '../HeroBgAnimation'
-import { GithubButton } from '../Navbar';
 
-const HeroContainer = styled.div `
-background-color: ${({theme}) => theme.card_light};
+const HeroContainer = styled.div`
+background-color: ${({ theme }) => theme.card_light};
 display: flex;
 justify-content: center;
 position: relative;
@@ -25,7 +24,7 @@ z-index: 1;
 clip-path: polygon(0 0, 100% 0, 100% 100%, 70% 95%, 0 100%);
 `;
 
-const HeroBg = styled.div `
+const HeroBg = styled.div`
   position: absolute;
   display: flex;
   justify-content: end;
@@ -35,7 +34,7 @@ const HeroBg = styled.div `
   left: 50%;
   overflow: hidden;
   width: 100%;
-  height: 100%;
+  height: 55%;
   padding: 0 30px;
   -webkit-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
@@ -46,14 +45,13 @@ const HeroBg = styled.div `
   }
 `;
 
-const HeroInnerContainer = styled.div `
+const HeroInnerContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
   max-width: 1100px;
 
-  
   @media screen and (max-width: 960px){
     flex-direction: column;
   }
@@ -101,10 +99,10 @@ const HeroRightContainer = styled.div`
 `;
 
 
-const Title = styled.div `
+const Title = styled.div`
     font-size: 50px;
     font-weight: 700;
-    color: ${({theme}) => theme.text_primary};
+    color: ${({ theme }) => theme.text_primary};
     line-height: 68px;
 
     @media screen and (max-width: 960px){
@@ -118,10 +116,10 @@ const Title = styled.div `
     }
 `;
 
-const TextLoop = styled.div `
+const TextLoop = styled.div`
     font-size: 32px;
     font-weight: 600px;
-    color: ${({theme}) => theme.text_primary};
+    color: ${({ theme }) => theme.text_primary};
     line-height: 68px;
     gap: 12px;
     display: flex;
@@ -142,15 +140,15 @@ const TextLoop = styled.div `
     }
 `;
 
-const Span = styled.div `
-color: ${({theme}) => theme.primary};
+const Span = styled.div`
+color: ${({ theme }) => theme.primary};
 cursor: pointer;
 text-transform: uppercase;
 `;
 
-const SubTitle = styled.div `
+const SubTitle = styled.div`
 font-size: 20px;
-color: ${({theme}) => theme.text_primary + 95};
+color: ${({ theme }) => theme.text_primary + 95};
 line-height: 32px;
 margin-botton: 42px;
 
@@ -167,7 +165,7 @@ margin-botton: 42px;
 
 `;
 
-const ResumeButton = styled.a `
+const ResumeButton = styled.a`
 -webkit-appearance: button;
 -moz-appearance: button;
 appearance: button;
@@ -189,12 +187,7 @@ background: -moz-linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 1
 background: -webkit-linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
 box-shadow:  20px 20px 60px #1F2634,
 -20px -20px 60px #1F2634;
-:hover {
-  transform: scale(1.05);
-  transition: all 0.4s ease-in-out;
-  padding: 10px;
-  box-shadow: 20px 20px 60px #1F2634,
-  filter: brightness(1);
+ :hover {
   background: ${({ theme }) => theme.primary};
   }
 
@@ -204,7 +197,7 @@ box-shadow:  20px 20px 60px #1F2634,
   }
 `;
 
-const Image = styled.img `
+const Image = styled.img`
   width: 100%;
   height: 100%
   position: relative;
@@ -228,40 +221,41 @@ const Image = styled.img `
 
 
 const Hero = () => {
+
   return (
     <div id='about'>
       <HeroContainer>
         <HeroBg>
-         <HeroBgAnimation/>
+          <HeroBgAnimation />
         </HeroBg>
         <HeroInnerContainer>
-            <HeroLeftContainer>
-              <Title>Hi, I am <br/> {Bio.name}</Title>
-              <TextLoop>
-                I am a 
-                <Span>
-                  <Typewriter
+          <HeroLeftContainer>
+            <Title>Hi, I am <br /> {Bio.name}</Title>
+            <TextLoop>
+              I am a
+              <Span>
+                <Typewriter
                   options={{
                     strings: Bio.roles,
                     autoStart: true,
                     loop: true
                   }}
-                  />
-                </Span>
-              </TextLoop>
-              <SubTitle>{Bio.description}</SubTitle>
-              <ResumeButton href={Bio.resume} target="blank">
-                  Check Resume
-              </ResumeButton>
-              
-            </HeroLeftContainer>
-            <HeroRightContainer>
-                  <Image src={image} alt="hero"/>
-            </HeroRightContainer>
-            </HeroInnerContainer>
+                />
+              </Span>
+            </TextLoop>
+            <SubTitle>{Bio.description}</SubTitle>
+
+            <ResumeButton href={Bio.resume} download='Rabin Shah Resume'>Check Resume
+            </ResumeButton>
+
+          </HeroLeftContainer>
+          <HeroRightContainer>
+            <Image src={image} alt="hero" />
+          </HeroRightContainer>
+        </HeroInnerContainer>
       </HeroContainer>
     </div>
   )
 }
 
-export default Hero
+export default Hero;

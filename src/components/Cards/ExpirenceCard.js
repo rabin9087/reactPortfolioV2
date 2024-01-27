@@ -1,4 +1,5 @@
 import React from 'react'
+import { Button } from 'react-bootstrap'
 import styled from 'styled-components'
 
 const Document = styled.img`
@@ -156,8 +157,16 @@ const ExperienceCard = ({ experience }) => {
                 </Body>
             </Top>
             <Description>
-                {experience?.desc &&
-                    <Span>{experience?.desc}</Span>
+                Responsibilities:
+                {experience?.desc.length > 0 &&
+                    <Span>{experience?.desc.map((item, i) => (
+                        <div key={i} style={{ paddingLeft: "2rem" }}>
+                            <ul >
+                                <li>{item}</li>
+                            </ul>
+                        </div>
+
+                    ))}</Span>
 
                 }
                 {experience?.skills &&
@@ -167,7 +176,7 @@ const ExperienceCard = ({ experience }) => {
                             <b>Skills:</b>
                             <ItemWrapper>
                                 {experience?.skills?.map((skill, index) => (
-                                    <Skill>• {skill}</Skill>
+                                    <Skill key={index}>• {skill}</Skill>
                                 ))}
                             </ItemWrapper>
                         </Skills>

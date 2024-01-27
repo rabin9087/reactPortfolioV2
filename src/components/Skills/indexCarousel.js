@@ -1,6 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 import { skills } from '../../data/constant'
+import Carousel from "react-bootstrap/Carousel";
+import { Col, Row } from 'react-bootstrap';
+
 
 const Container = styled.div`
 display: flex;
@@ -117,31 +120,44 @@ const SkillImage = styled.img`
   width: 24px;
   height: 24px;
 `
-const Skills = () => {
+const CarouselSkills = () => {
   return (
     <Container id="skills">
       <Wrapper>
         <Title>Skills</Title>
         <Desc>Here are some of my skills on which I have been working on for the past 2 years.
         </Desc>
-        <SkillsContainer>
-          {skills.map((skill, i) => (
-            <Skill key={i}>
-              <SkillTitle>{skill.title}</SkillTitle>
-              <SkillList>
-                {skill.skills.map((item, index) => (
-                  <SkillItem key={index}>
-                    <SkillImage src={item.image} />
-                    {item.name}
-                  </SkillItem>
-                ))}
-              </SkillList>
-            </Skill>
-          ))}
-        </SkillsContainer>
+        <Container fluid>
+          <Row>
+            <Col>
+
+              <SkillsContainer>
+                <Carousel data-bs-theme="dark" style={{ width: "120%" }} interval={1000}>
+                  {skills.map((skill, i) => (
+
+                    <Carousel.Item key={i}>
+                      {/* <img className="d-block w-100" src={library1} alt="First slide" /> */}
+                      <Skill key={i}>
+                        <SkillTitle>{skill.title}</SkillTitle>
+                        <SkillList>
+                          {skill.skills.map((item, index) => (
+                            <SkillItem key={index}>
+                              <SkillImage src={item.image} />
+                              {item.name}
+                            </SkillItem>
+                          ))}
+                        </SkillList>
+                      </Skill>
+                    </Carousel.Item>
+                  ))}
+                </Carousel>
+              </SkillsContainer>
+            </Col>
+          </Row>
+        </Container>
       </Wrapper>
     </Container>
   )
 }
 
-export default Skills
+export default CarouselSkills
