@@ -8,6 +8,8 @@ import portfolioV1 from '../images/assets/portfolioV1.png'
 import android1 from '../images/assets/android1.png'
 import financeMangement from '../images/assets/transactionManagement.png'
 import libraryManagemant from '../images/assets/libraryManagement.png'
+import cricketGearAdmin from '../images/assets/cricketGearAdmin.png'
+import cricketGearClient from '../images/assets/cricketGearClient.png'
 
 export const Bio = {
   name: "Rabin Shah",
@@ -221,7 +223,38 @@ export const education = [
 ];
 
 export const projects = [
+  {
+    id: 0,
+    title: "E-Commerce Website",
+    date: "Dec 2023 - Present",
+    description: "This is e-commerce website build using react, nodejs, mongodDB, express, redux etc..",
+    image:
+      cricketGearClient,
+    tags: [
+      "HTML", "CSS", "Javascript", "Bootstrap", "React-Bootstrap", "Redux", "Tailwind",
+      "React Js", "MongoDB",
 
+    ],
+    category: "web app",
+    github: "https://github.com/rabin9087/client-cms-frontend",
+    webapp: "https://cricket-gear.vercel.app/",
+  },
+  {
+    id: 0,
+    title: "E-Commerce Admin Site",
+    date: "Dec 2023 - Present",
+    description: "This is e-commerce website build using react, nodejs, mongodDB, express, redux, tailwindcss.",
+    image:
+      cricketGearAdmin,
+    tags: [
+      "HTML", "CSS", "Javascript", "Bootstrap", "React-Bootstrap", "redux",
+      "React Js", "MongoDB",
+
+    ],
+    category: "web app",
+    github: "https://github.com/rabin9087/admin-cms-frontend",
+    webapp: "https://admin-cms-frontend.vercel.app/",
+  },
   {
     id: 0,
     title: "Library Managemant System",
