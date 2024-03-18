@@ -227,7 +227,11 @@ export const projects = [
     id: 0,
     title: "E-Commerce Website",
     date: "Dec 2023 - Present",
-    description: "This is e-commerce website build using react, nodejs, mongodDB, express, redux etc..",
+    description: "This is e-commerce website project, responsive across all devices and was built using React, Node.js, Tailwind CSS, HTML, CSS, JavaScript, MongoDB for the database, Redux for global state management, Stripe for payment processing, and JWT for authentication and authorization. It also utilizes various other npm packages.\n" +
+      "Key Features: \n " +
+      "Users can order cricket gear products.\n " +
+      "Ability to search products by name.\n " +
+      "Landing page suggests similar items for enhanced user experience.",
     image:
       cricketGearClient,
     tags: [
