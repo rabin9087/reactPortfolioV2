@@ -4,7 +4,7 @@ import movieDb from '../images/assets/movieDb.png'
 import prankCalculator from '../images/assets/prankCalulator.png'
 import notTodoList from '../images/assets/notToDOList.png'
 import unitConverter from '../images/assets/unitConverter.png'
-import portfolioV1 from '../images/assets/portfolioV1.png'
+// import portfolioV1 from '../images/assets/portfolioV1.png'
 import android1 from '../images/assets/android1.png'
 import financeMangement from '../images/assets/transactionManagement.png'
 import libraryManagemant from '../images/assets/libraryManagement.png'
@@ -21,7 +21,7 @@ export const Bio = {
     "Android Developer",
     "Programmer",
   ],
-  description: "Dedicated and highly motivated individual with experience in developing and implementing software solutions. Proven experience in creating, testing, and debugging high-performance software systems, with a sharp eye for details. Possesses excellent problem-solving and communication abilities, as well as a strong desire to learn about and adopt new technologies.",
+  description: "Highly Dedicated and motivated full stack developer with 2+ years of experience in building scalable and effective software solutions. Proficient in designing and developing database, creating RESTful APIs, and writing clean and maintainable code with high-performance software systems. Possesses excellent problem-solving and communication abilities, as well as a strong desire to learn about and adopt new technologies and focus on career growth.",
   github: "https://github.com/rabin9087",
   resume:
     resume,
@@ -60,9 +60,19 @@ export const skills = [
           "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/800px-JavaScript-logo.png",
       },
       {
+        name: "TypeScript",
+        image:
+          "https://static-00.iconduck.com/assets.00/file-type-typescript-icon-512x338-z2qpgdwd.png",
+      },
+      {
         name: "Bootstrap",
         image:
           "https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo-shadow.png",
+      },
+      {
+        name: "Tailwind",
+        image:
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTX9fZzRj7BuQAtuf6RSuqIjWEaai2Vl7sFq2Y6tKq5hA&s",
       },
     ],
   },
@@ -141,7 +151,7 @@ export const experiences = [
     img: "https://selfplus.plus/wp-content/uploads/2021/11/selfplusplus-logo-full-color-rgb.svg",
     role: "Full Stack Developer",
     company: "Self Plus Plus",
-    date: "August 2023 - Current",
+    date: "August 2023 - March 2024",
     desc: [
       "Actively involved in developing server-side web applications using Node.js and Express, ensuring seamless integration with front-end technologies",
       "Utilized Prisma as the ORM tool to streamline database integrations and implemented CRUD operations in MySQL, optimizing data retrieval and updating processes",
@@ -171,13 +181,14 @@ export const experiences = [
     img: "data:image/png;base64,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",
     role: "FRONT END DEVELOPER ",
     company: "Extratech",
-    date: "March 2022 - July 2023",
+    date: "September 2022 - July 2023",
     desc: [
-      "Developed and maintained react app using HTML5, CSS3, JavaScript, Bootstraps, React.js, and Tailwind",
+      "Developed and maintained react application using HTML5, CSS3, TypeScript, React.js, Redux, and Tailwind.",
       "Created and developed database structures and enhance SQL queries to improve the efficiency of data retrieval",
       "Used version control systems like Git to manage and track changes in the codebase",
       "Created and deployed RESTful APIs to seamlessly integrate external services",
       "Collaborated with back-end developers to integrate front-end components with server-side logic and APIs",
+      "Integrated JWT for secure authentication and implemented rigorous input validation to enhance API security, reducing potential security threats.",
       "Staying up-to-date with the latest trends, technologies, and best practices",
       "Debugged and fixed the bugs to ensure optimal performance and functionality of web applications"],
     skills: [
@@ -339,48 +350,48 @@ export const projects = [
     webapp: "https://prank-calculator-95obhprwd-rabins-projects.vercel.app/",
   },
 
-  {
-    id: 5,
-    title: "Unit Converter",
-    date: "Aug 2023",
-    description: "This is unit converter web app. You can convert unit of Length, Area, Volume, Weight, Temperature and Time into another unit",
-    image:
-      unitConverter,
-    tags: ["HTML", "CSS", "Javascript", "Bootstrap", "React Js"],
-    category: "web app",
-    github: "https://github.com/rabin9087/unitconverter",
-    webapp: "https://vercel.com/rabins-projects/unitconverter",
-  },
-  {
-    id: 6,
-    title: "Weather Forecast",
-    date: "Oct 2023",
-    description:
-      "This is weather forecast web apps. You can search weather of any city jusy by searching city name",
-    image:
-      weatherForecast,
-    tags: [
-      "HTML", "CSS", "Javascript", "Bootstrap",
-      "React Js",
+  // {
+  //   id: 5,
+  //   title: "Unit Converter",
+  //   date: "Aug 2023",
+  //   description: "This is unit converter web app. You can convert unit of Length, Area, Volume, Weight, Temperature and Time into another unit",
+  //   image:
+  //     unitConverter,
+  //   tags: ["HTML", "CSS", "Javascript", "Bootstrap", "React Js"],
+  //   category: "web app",
+  //   github: "https://github.com/rabin9087/unitconverter",
+  //   webapp: "https://unitconverter-five.vercel.app/",
+  // },
+  // {
+  //   id: 6,
+  //   title: "Weather Forecast",
+  //   date: "Oct 2023",
+  //   description:
+  //     "This is weather forecast web apps. You can search weather of any city jusy by searching city name",
+  //   image:
+  //     weatherForecast,
+  //   tags: [
+  //     "HTML", "CSS", "Javascript", "Bootstrap",
+  //     "React Js",
 
-    ],
-    category: "web app",
-    github: "https://github.com/rabin9087/weatherForecast",
-    webapp: "https://weather-forecast-pearl.vercel.app/",
-  },
-  {
-    id: 7,
-    title: "Portfolio Version 1",
-    date: "Oct 2023",
-    description:
-      "This is my Portfolio version one. This was my first portfolio.",
-    image:
-      portfolioV1,
-    tags: ["HTML", "CSS", "ReactJS", "JavaScript"],
-    category: "web app",
-    github: "https://github.com/rabin9087/reactPortfolio",
-    webapp: "https://react-portfolio-virid-beta.vercel.app/",
-  },
+  //   ],
+  //   category: "web app",
+  //   github: "https://github.com/rabin9087/weatherForecast",
+  //   webapp: "https://weather-forecast-pearl.vercel.app/",
+  // },
+  // {
+  //   id: 7,
+  //   title: "Portfolio Version 1",
+  //   date: "Oct 2023",
+  //   description:
+  //     "This is my Portfolio version one. This was my first portfolio.",
+  //   image:
+  //     portfolioV1,
+  //   tags: ["HTML", "CSS", "ReactJS", "JavaScript"],
+  //   category: "web app",
+  //   github: "https://github.com/rabin9087/reactPortfolio",
+  //   webapp: "https://react-portfolio-virid-beta.vercel.app/",
+  // },
   {
     id: 8,
     title: "NepService",
@@ -393,18 +404,18 @@ export const projects = [
     github: "https://github.com/rabin9087/NepService",
     webapp: "https://www.linkedin.com/posts/rabin-shah-175a20117_android-activity-7047740802977976320-jj4I?utm_source=share&utm_medium=member_desktop",
   },
-  {
-    id: 9,
-    title: "Student Details",
-    date: "Oct 2021",
-    description:
-      "This is an android application, build in android studio. In this application user can enter their score in different subjects and the application will show average score and other details",
-    image: "",
-    tags: ["Java", "Android Studio",],
-    category: "android app",
-    github: "https://github.com/rabin9087/StudentID",
-    webapp: "https://github.com/rabin9087/StudentID",
-  },
+  // {
+  //   id: 9,
+  //   title: "Student Details",
+  //   date: "Oct 2021",
+  //   description:
+  //     "This is an android application, build in android studio. In this application user can enter their score in different subjects and the application will show average score and other details",
+  //   image: "",
+  //   tags: ["Java", "Android Studio",],
+  //   category: "android app",
+  //   github: "https://github.com/rabin9087/StudentID",
+  //   webapp: "https://github.com/rabin9087/StudentID",
+  // },
 
 ];
 
