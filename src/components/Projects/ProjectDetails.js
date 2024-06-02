@@ -209,7 +209,8 @@ const ProjectDetails = ({ openModal, setOpenModal }) => {
                     <Desc>{project?.description}</Desc>
 
                     <ButtonGroup>
-                        <Button dull href={project?.github} target='new'>View Code</Button>
+                        <Button dull href={project?.github} target='new'>{project?.github2 ? "Frontend Code" : "View Code"}</Button>
+                        {project?.github2 && <Button dull href={project?.github2} target='new'>Backend Code</Button>}
                         <Button href={project?.webapp} target='new'>View Live App</Button>
                     </ButtonGroup>
                 </Wrapper>
