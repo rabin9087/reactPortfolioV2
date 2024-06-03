@@ -22,7 +22,7 @@ export const Bio = {
     "Android Developer",
     "Programmer",
   ],
-  description: "Highly Dedicated and motivated full stack developer with 2+ years of experience in building scalable and effective software solutions. Proficient in designing and developing database, creating RESTful APIs, and writing clean and maintainable code with high-performance software systems. Possesses excellent problem-solving and communication abilities, as well as a strong desire to learn about and adopt new technologies and focus on career growth.",
+  description: "Highly Dedicated and motivated full stack developer with 3+ years of experience in building scalable and effective software solutions. Proficient in designing and developing database, creating RESTful APIs, and writing clean and maintainable code with high-performance software systems. Possesses excellent problem-solving and communication abilities, as well as a strong desire to learn about and adopt new technologies and focus on career growth.",
   github: "https://github.com/rabin9087",
   resume:
     resume,
@@ -211,7 +211,7 @@ export const education = [
     school: "Victoria University, Sydney, NSW",
     date: "July 2020 - Sep 2022",
     grade: "8.71 CGPA",
-    desc: "I am currently pursuing a Bachelor's degree in Computer Science and Engineering at Kalinga Institute of Industrial Technology, Bhubaneswar. I have completed 4 semesters and have a CGPA of 8.71. I have taken courses in Data Structures, Algorithms, Object-Oriented Programming, Database Management Systems, Operating Systems, and Computer Networks, among others. I am also a member of the Google Developers Student Club (GDSC) at KIIT, where I am learning and working on exciting projects with a team of talented developers.",
+    desc: "",
     degree: "Bachelor of Information Technology",
   },
   {
@@ -220,7 +220,7 @@ export const education = [
     school: "Kingston Institute Australia, Sydney, NSW",
     date: "November 2018 - June 2020",
     grade: "Competent",
-    desc: "I completed my class 12 high school education at Methodist School, Dankuni, where I studied Science with Computer Science.",
+    desc: "",
     degree: "Advanced Diploma of Information Technology",
   },
   {
