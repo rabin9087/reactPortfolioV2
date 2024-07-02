@@ -152,7 +152,7 @@ export const experiences = [
     img: "https://selfplus.plus/wp-content/uploads/2021/11/selfplusplus-logo-full-color-rgb.svg",
     role: "Full Stack Developer",
     company: "Self Plus Plus",
-    date: "August 2023 - March 2024",
+    date: "August 2023 - June 2024",
     desc: [
       "Actively involved in developing server-side web applications using Node.js and Express, ensuring seamless integration with front-end technologies",
       "Utilized Prisma as the ORM tool to streamline database integrations and implemented CRUD operations in MySQL, optimizing data retrieval and updating processes",
