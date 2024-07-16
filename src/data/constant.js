@@ -1,10 +1,7 @@
-import resume from '../images/assets/rabinShahResume.docx';
-import weatherForecast from '../images/assets/weatherForecastIMG.png'
+import resume from '../images/assets/rabinShahResume.pdf';
 import movieDb from '../images/assets/movieDb.png'
 import prankCalculator from '../images/assets/prankCalulator.png'
 import notTodoList from '../images/assets/notToDOList.png'
-import unitConverter from '../images/assets/unitConverter.png'
-// import portfolioV1 from '../images/assets/portfolioV1.png'
 import android1 from '../images/assets/android1.png'
 import financeMangement from '../images/assets/transactionManagement.png'
 import libraryManagemant from '../images/assets/libraryManagement.png'
