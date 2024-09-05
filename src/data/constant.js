@@ -19,8 +19,7 @@ export const Bio = {
     "Android Developer",
     "Programmer",
   ],
-  description: "Highly Dedicated and motivated full stack developer with 3+ years of experience in building scalable and effective software solutions. Proficient in designing and developing database, creating RESTful APIs, and writing clean and maintainable code with high-performance software systems. Possesses excellent problem-solving and communication abilities, as well as a strong desire to learn about and adopt new technologies and focus on career growth.",
-  github: "https://github.com/rabin9087",
+  description: "Highly dedicated and motivated front-end developer with 3+ years of experience in building scalable, high-performing, and innovative applications using modern technologies like JavaScript, React, TypeScript, and AngularJS. Proficient in converting designs into robust, accessible, user-friendly web application interfaces, and skilled in API integration using RESTful services. Adept at collaborating within Agile teams, optimizing CI/CD pipelines, and implementing unit testing strategies. Strong emphasis on security, performance, and creating seamless user experiences across devices. Excellent communicator with a commitment to continuous learning and career growth.",  github: "https://github.com/rabin9087",
   resume:
     resume,
   linkedin: "https://www.linkedin.com/in/rabin-shah",
