@@ -146,11 +146,11 @@ export const experiences = [
   {
     id: 0,
     img: "https://media.licdn.com/dms/image/C560BAQGNeKic6vWDRg/company-logo_200_200/0/1630617312483/rebb_tech_pty_ltd_logo?e=2147483647&v=beta&t=QwA2s1qIELwrKFx6xuMJb-hwJ4xavOYnfiw_MXofmqs",
-    role: "Full Stack Developer",
+    role: "Full Stack Developer - Full-time",
     company: "Rebb Tech ",
     date: "December 2021 - Present",
     desc: [
-    "Actively involved in web development using JavaScript Framework such as React.js for frontend development and Express.js for server-side development",
+    "Developed web application using JavaScript Framework such as React.js for the frontend and Express.js for the backend",
     "Utilized Prisma as the ORM tool to streamline database integrations and implemented CRUD operations in MySQL, optimizing data retrieval and updating processes, resulting in a 40% increase in data processing speed",
     "Utilized Postman to rigorously test APIs endpoints, ensuring functionality, performance, and security",
     "Managed version control using Git, facilitating collaborative development and codebase maintenance",
@@ -168,6 +168,7 @@ export const experiences = [
       "JavaScript",
       "ReactJS",
       "Redux",
+      "React-Query",
       "NodeJs",
       "ExpressJs",
       "MySQL",
@@ -176,11 +177,11 @@ export const experiences = [
     doc: "",
   },
   {
-    id: 0,
-    img: "https://selfplus.plus/wp-content/uploads/2021/11/selfplusplus-logo-full-color-rgb.svg",
-    role: "FRONT END DEVELOPER ",
-    company: "Self Plus Plus",
-    date: "July 2021 - October 2021",
+    id: 1,
+    img: "https://media.licdn.com/dms/image/v2/D560BAQH3WjcoYHfhmg/company-logo_200_200/company-logo_200_200/0/1711058460689/dented_code_academy_logo?e=1735171200&v=beta&t=bcoD4y-ZeEKExd1oVJJhR3F-0HCH7a_9TfFPLea0qpE",
+    role: "Junior Frontend Developer - Part-time",
+    company: "Dented Code",
+    date: "July 2021 - Sept 2022",
     desc: [
     "Developed and maintained react application using HTML5, CSS3, TypeScript, React.js, Vite, Redux, and Tailwind",
     "Used Git as a version control system to manage and track changes in the codebase",
@@ -199,6 +200,48 @@ export const experiences = [
       "ReactJS",
       "Tailwind",
       "Bootstrap",
+    ],
+    doc: "",
+  },
+   {
+    id: 2,
+    img: "https://media.licdn.com/dms/image/v2/D560BAQGitkNWtrxZug/company-logo_200_200/company-logo_200_200/0/1719359018587/woolworths_group_logo?e=1735171200&v=beta&t=Pye28CNHQ11oLFjrR0bXw5b-EF9O_iQij6hVlo9A5J4",   role: "Shift Supervisor – Part-time  ",
+    company: "Woolworths Group",
+    date: "Dec 2020 - June 2021",
+    desc: [
+ 
+  "Supervised a team, providing guidance and ensuring smooth day-to-day operations",
+  "Handled customer inquiries and complaints with strong problem-solving skills",
+  "Managed inventory levels and placed orders to ensure stock availability",
+  "Maintained service standards by enforcing policies and procedures"
+
+    ],
+     skills: [
+      "time Management",
+      "Team Player",
+      "Problem-Solving",
+      "Communication and Collaboration",
+      "Attention to detail",
+    ],
+    doc: "",
+  },
+    {
+    id: 3,
+    img: "https://media.licdn.com/dms/image/v2/C4E0BAQHWxquJ9PJxvw/company-logo_200_200/company-logo_200_200/0/1630594652024/mcdonalds_corporation_logo?e=1735171200&v=beta&t=iKBvVfifDAXr-UJtqZsUGDDfUznvW4ZDnM_GyCs_i2I",   role: "Crew Trainer – Part-time ",
+    company: "McDonald’s",
+    date: "July 2017 - Nov 2020",
+    desc: [
+    "Trained new employees in operational procedures, safety, and customer service",
+    "Ensured compliance with food safety standards and regulations",
+    "Collaborated with management to implement operational improvements"
+
+    ],
+    skills: [
+      "Customer Service",
+      "Team Player",
+      "Problem-Solving",
+      "Communication and Collaboration",
+      "Handle with Care",
     ],
     doc: "",
   },
