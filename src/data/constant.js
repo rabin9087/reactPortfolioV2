@@ -7,6 +7,7 @@ import financeMangement from '../images/assets/transactionManagement.png'
 import libraryManagemant from '../images/assets/libraryManagement.png'
 import cricketGearAdmin from '../images/assets/cricketGearAdmin.png'
 import cricketGearClient from '../images/assets/cricketGearClient.png'
+import shahKiranaPasal from '../images/assets/shahKiranaPasal.png'
 import todo from '../images/assets/todo.png'
 
 export const Bio = {
@@ -329,6 +330,31 @@ export const education = [
 ];
 
 export const projects = [
+  {
+    id: 0,
+    title: "Shah Kirana Pasal",
+    date: "June 2024 - Present",
+    description: "This is e-commerce website project, responsive across all devices and was built using React, Node.js, Tailwind CSS, HTML, CSS, JavaScript, TypeScript, MongoDB for the database, Redux for global state management, Stripe for payment processing, and JWT for authentication and authorization. It also utilizes various other npm packages.\n" +
+      "Key Features: \n " +
+      "Shah Kirana Pasal is an online grocery store offering a wide range of products, including snacks, spices, and daily essentials..\n " +
+      "User can place order, select pickup or delivery types along with payment by Card or Cash on pick up or delivery, view order history,  and manage their account information.\n " +
+      "Admin can manage products, orders, users, and other functionalities.\n " +
+      "The website is fully responsive and accessible on all devices, including desktops, laptops, tablet" +
+      "s, and smartphones.\n " +
+      "Admin or Picker can pick customers order using app which show each items location, number of order, number of supplied items." + 
+      "Picker can pick article by scaning barcode of items or if no barcode available for articles they can click WSCAN button to collect items, also update status of order",
+      
+    image:
+      shahKiranaPasal,
+    tags: [
+      "HTML", "CSS", "Javascript", "TypeScript", "Bootstrap", "React-Bootstrap", "React.js", "Redux", "Tailwind", "MongoDB", "Stripe", "JWT", "Node.js", "Express.js", 
+
+    ],
+    category: "web app",
+    github: "https://github.com/rabin9087/shah-kirana-pasal-frontend",
+    github2: "https://github.com/rabin9087/shah-kirana-pasal-backend",
+    webapp: "https://www.shahkiranapasal.shop/",
+  },
   {
     id: 0,
     title: "E-Commerce Website",
